@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/anthonymonori/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="sunrise"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -90,10 +90,10 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER="anthonymonori"
 
 # added by travis gem
-[ -f /Users/anthonymonori/.travis/travis.sh ] && source /Users/anthonymonori/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source /Users/anthonymonori/.travis/travis.sh
 
 # OPAM configuration
-. /Users/anthonymonori/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # JDK Switcher - custom
 function setjdk() {
@@ -144,3 +144,10 @@ alias pb='protoc --decode_raw'
 alias ipfwdon='sudo sysctl -w net.inet.ip.forwarding=1'	
 
 alias ipfwdoff='sudo sysctl -w net.inet.ip.forwarding=0'
+
+# Git aliases
+alias gs='git status'
+alias ga='git add $*'
+alias gca='git commit -am $*'
+alias push='git push origin master'
+alias pull='git pull origin master'
