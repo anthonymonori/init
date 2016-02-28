@@ -6,5 +6,10 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # copy zsh profile
 cp ./.zshrc ~/.zshrc
 
-# INSTALL GIT
+# INSTALL GIT plus extras
 brew install git
+brew install git-extras
+
+# INSTALL node, npm
+brew install node
+sudo npm install -g npm
