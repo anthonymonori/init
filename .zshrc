@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/dkanjamo/.oh-my-zsh
 
+# Set default username
+export USERNAME="anthonymonori"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -52,13 +55,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git gradle github)
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/gradle/bin:/usr/local/proguard/bin:$PATH"
-export MANPATH="/usr/local/man:$MANPATH"
-
-### ANDROID SDK
-export ANDROID_HOME="~/Library/Android/sdk"
+export ANDROID_HOME="/Users/$USERNAME/Library/Android/sdk"
 export ANDROID_BUILD_VERSION="23.0.3"
-export PATH="$PATH:$ANDROID_HOME/build-tools/$ANDROID_BUILD_VERSION:$ANDROID_HOME/platform-tools"
+export PATH="/usr/local/sbin:/usr/local/gradle/bin:/usr/local/proguard/bin:$ANDROID_HOME/build-tools/$ANDROID_BUILD_VERSION:$ANDROID_HOME/platform-tools:$PATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
