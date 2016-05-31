@@ -124,6 +124,6 @@ alias ipfwdoff='sudo sysctl -w net.inet.ip.forwarding=0'
 # Git specific aliases
 alias gs='git status'
 alias ga='git add $*'
-alisa gca='git commit -a $*'
+alias gca='git commit -a $*'
 alias push='git push origin $*'
 alias pull='git pull origin $*'
