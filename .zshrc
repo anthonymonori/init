@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=/Users/dkanjamo/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -30,12 +30,12 @@ ZSH_THEME="sunrise"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -52,19 +52,18 @@ ZSH_THEME="sunrise"
 plugins=(git gradle github)
 
 # User configuration
-
-export PATH="/usr/local/heroku/bin:/Applications/leJOS_NXJ/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/Applications/Utilities/infer/infer/bin:/Applications/Utilities/android-ndk-r10e/"
+export PATH="/usr/local/sbin:/usr/local/gradle/bin:/usr/local/proguard/bin:$PATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 ### ANDROID SDK
-export ANDROID_HOME="/Users/anthonymonori/Library/Android/sdk"
-export PATH="$PATH:$ANDROID_HOME/build-tools/23.0.0:$ANDROID_HOME/platform-tools"
-
-# export MANPATH="/usr/local/man:$MANPATH"
+export ANDROID_HOME="~/Library/Android/sdk"
+export ANDROID_BUILD_VERSION="23.0.3"
+export PATH="$PATH:$ANDROID_HOME/build-tools/$ANDROID_BUILD_VERSION:$ANDROID_HOME/platform-tools"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -78,22 +77,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-DEFAULT_USER="anthonymonori"
-
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source /Users/anthonymonori/.travis/travis.sh
-
-# OPAM configuration
-. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # JDK Switcher - custom
 function setjdk() {
@@ -110,44 +93,37 @@ function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
 
-# alias hacks
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+# Configuration aliases
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# System-wide aliases
 alias wget='wget -e robots=off --no-check-certificate --referer="http://www.google.com" --user-agent="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" --header="Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5" --header="Accept-Language: en-us,en;q=0.5" --header="Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7" --header="Keep-Alive: 300"'
-
 alias diff='colordiff -btwur'
-
 alias scp='scp -pr'
-
 alias mkdir='mkdir -p'
-
 alias w='which'
-
 alias p='ping 4.2.2.2'
-
 alias o='open $*'
-
 alias ls='ls -Gh'
-
 alias du='du -h'
-
 alias df='df -h | egrep -v "^map -hosts|^devfs"'
-
 alias unp='perl -MO=Deparse $*'
-
 alias f='find . | grep -P --color $*'
-
 alias h='hexdump -C'
-
-alias be='bundle exec'	
-
+alias be='bundle exec'
 alias pb='protoc --decode_raw'
-
-alias ipfwdon='sudo sysctl -w net.inet.ip.forwarding=1'	
-
+alias ipfwdon='sudo sysctl -w net.inet.ip.forwarding=1'
 alias ipfwdoff='sudo sysctl -w net.inet.ip.forwarding=0'
 
-# Git aliases
+# Git specific aliases
 alias gs='git status'
 alias ga='git add $*'
 alisa gca='git commit -a $*'
-alias push='git push origin master'
-alias pull='git pull origin master'
+alias push='git push origin $*'
+alias pull='git pull origin $*'
