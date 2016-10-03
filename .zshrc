@@ -1,8 +1,8 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/dkanjamo/.oh-my-zsh
-
 # Set default username
 export USERNAME="anthonymonori"
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/$USERNAME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
