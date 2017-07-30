@@ -26,3 +26,7 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # INSTALL powerlevel9k theme for OH-MY-ZS
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+# CLONE awesome-terminal-fonts
+cd ~ && mkdir temp && cd temp && git clone https://github.com/gabrielelana/awesome-terminal-fonts.git && cd awesome-terminal-fonts
+# Rest has to be manual for now: https://github.com/gabrielelana/awesome-terminal-fonts/wiki/OS-X
