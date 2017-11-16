@@ -25,7 +25,7 @@ plugins=(git)
 # User configuration
 export ANDROID_HOME="/Users/$USERNAME/Library/Android/sdk"
 export ANDROID_BUILD_VERSION="23.0.3"
-export PATH="/usr/local/sbin:/usr/local/gradle/bin:/usr/local/proguard/bin:$ANDROID_HOME/build-tools/$ANDROID_BUILD_VERSION:$ANDROID_HOME/platform-tools:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools"
+export PATH="/usr/local/sbin:/usr/local/gradle/bin:/usr/local/proguard/bin:$ANDROID_HOME/build-tools/$ANDROID_BUILD_VERSION:$ANDROID_HOME/platform-tools:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
