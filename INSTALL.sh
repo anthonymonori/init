@@ -28,6 +28,9 @@ brew install git git-extras git-flow-avh node atom
 # INSTALL npm
 sudo npm install -g npm
 
+# INSTALL GPG
+brew install gnupg gpg-agent pinentry-mac
+
 # INSTALL various other tools
 brew install colordiff keybase python wget coreutils
 
@@ -39,6 +42,3 @@ brew install android-studio gradle apktool pngcrush
 
 # INSTALL docker
 brew install docker
-
-# INSTALL other productivity tools
-brew install lastpass
