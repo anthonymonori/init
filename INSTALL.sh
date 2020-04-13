@@ -23,7 +23,7 @@ cp ./.bashrc ~/.bashrc
 cp ./.bash_profile ~/.bash_profile
 
 # INSTALL GIT plus extras, git-flow and node basic starter pack
-brew install git git-extras git-flow-avh node atom
+brew install git git-extras git-flow-avh node
 
 # INSTALL npm
 sudo npm install -g npm
@@ -32,13 +32,13 @@ sudo npm install -g npm
 brew install gnupg gpg-agent pinentry-mac
 
 # INSTALL various other tools
-brew install colordiff keybase python wget coreutils
+brew install colordiff python wget coreutils
 
 # RVM with stable ruby
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # INSTALL Android Studio & Android related tools
-brew install android-studio gradle apktool pngcrush
+brew install gradle apktool pngcrush
 
 # INSTALL docker
 brew install docker
